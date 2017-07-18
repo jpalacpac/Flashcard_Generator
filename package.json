@@ -1,0 +1,22 @@
+{
+  "name": "flash_card_app",
+  "version": "1.0.0",
+  "description": "A flash card application that forces users to remember the important part of a sentence.",
+  "main": "BasicCard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpalacpac/Flashcard_Generator.git"
+  },
+  "author": "Jonnie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpalacpac/Flashcard_Generator/issues"
+  },
+  "homepage": "https://github.com/jpalacpac/Flashcard_Generator#readme",
+  "dependencies": {
+    "inquirer": "^3.2.0"
+  }
+}
