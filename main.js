@@ -77,7 +77,7 @@ function clozeQuiz() {
 			}
 
 			else {
-				console.log("Nope! The right answer is " + arrayCloze[count.cloze]);
+				console.log("Nope! The right answer is " + arrayCloze[count].cloze);
 			}
 			count++;
 			clozeQuiz();
