@@ -33,7 +33,30 @@ function userChoice() {
 			clozeQuiz();
 		}
 	})
-}
+};
+
+function redoQuiz() {
+	var totalScore = "You got " + score + " correct."
+
+	console.log(totalScore);
+	inquirer.prompt([
+		{
+			type: "confirm",
+			name: "confirm",
+			message: "Wanna play again?",
+		}
+	]).then(function(answers) {
+		if (answers.confirm) {
+			count = 0;
+			score = 0;
+			userChoice()
+		}
+
+		else {
+			console.log("GG")
+		}
+	});
+};
 
 function basicQuiz() {
 	if (count < arrayBasic.length) {
@@ -60,7 +83,7 @@ function basicQuiz() {
 	else {
 		redoQuiz();
 	}
-}
+};
 
 function clozeQuiz() {
 	if (count < arrayCloze.length) {
@@ -87,29 +110,6 @@ function clozeQuiz() {
 	else {
 		redoQuiz(); 
 	}
-}
-
-function redoQuiz() {
-	var totalScore = "You got " + score + " correct."
-
-	console.log(totalScore);
-	inquirer.prompt([
-		{
-			type: "confirm",
-			name: "confirm",
-			message: "Wanna play again?",
-		}
-	]).then(function(answers) {
-		if (answers.confirm) {
-			count = 0;
-			score = 0;
-			userChoice()
-		}
-
-		else {
-			console.log("GG")
-		}
-	});
-}
+};
 
 userChoice();
